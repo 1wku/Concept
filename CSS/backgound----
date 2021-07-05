@@ -1,0 +1,26 @@
+1.background-clip.
+-quyết định là backgound được bắt đầu từ phần nào:
+    +boder-box: mặc đình, đổ từ border.
+    +padding-box: đổ từ padding.
+    +content-box: chỉ đổ màu content.
+2.background-iamge.
+-đặt background là ảnh.
+    + có thể sử dụng url bằng cú pháp url(URL) HOẶC gradient cách nhau bằng giấy phẩy.
+    + background-repeat:. no-repeat; -> không bị lập lại.
+                        . repeat-x -> lập lại theo chiều ngang.
+                        . repeat-Y -> lập lại theo chiều dọc.
+    + background-size: 100px; -> set chiều ngang bức ảnh 100px và chiều cao auto canh theo tỉ lệ.
+        bonus: 
+                      contain -> vừa đủ trong khung của thành phần cha.
+                      cover -> chọn cạnh dài hơn của thẻ cha, vẫn có thể bị khoắt arnh và không để dư khoảng trắng.
+    + background-origin: tương tự background-clip. 
+    + background-position: top
+                           right
+                           left
+                           bottom
+                           center
+                           có thể kết hợp 2 giá trị 
+
+cách viết rút gọn 
+-> background: <nguồn của bc> <repeat> <position> / <size>;
+                           

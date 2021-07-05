@@ -1,0 +1,9 @@
+font-size: 100%;
+=> 1rem = 1em = 16px;
+
+chủ động set
+font-size: 62.5%;
+=> 1rem = 1em = 10px;   
+đơn vị em là đơn vị phụ thuộc vào chính nó hoặc đơn vị cha chứa nó 
+đơn vị rem là đơn vị phụ thuộc vào font-size của html 
+

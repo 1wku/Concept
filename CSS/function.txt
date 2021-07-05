@@ -1,0 +1,2 @@
+1.calc(); <hàm toán học> 
+2.attr(); <lấy thuộc tính> 

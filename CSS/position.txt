@@ -1,0 +1,12 @@
+POSITION
+1.relative <vị trí tương đối>
+->lấy điểm hiện tại làm gốc để di chuyển bằng left right top bottom;
+
+2.absolute <vị trí tuyệt đối>
+-> lấy thẻ cha gần nhất có <position: relative> làm gốc tạo độ;
+
+3.fixed 
+-> chỉ phụ thuộc vào cửa sổ trình duyệt.
+
+4.sticky 
+->

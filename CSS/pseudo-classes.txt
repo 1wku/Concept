@@ -1,0 +1,25 @@
+1:root
+2:hover 
+3:active 
+4:first-child 
+5:last-child
+
+1:root {
+
+}
+
+2:hover {
+    kích hoạt khi di chuột vào;
+}
+
+3:active {
+    bấm và giữ chuột;
+}
+
+4:first-child {
+    gây ảnh hưởng tối phần tử con đấu tiên;
+}
+
+5:last-child {
+    gây ảnh hưởng tới phần tử con cuối cùng;
+}

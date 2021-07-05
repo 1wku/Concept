@@ -1,0 +1,7 @@
+#inline 
+    -> Có độ lớn bằng content.
+    -> Nhiều thẻ inline thì sẽ cùng nằm 1 hàng. 
+#block 
+    -> có độ rộng là full phần tử cha chứa nó.
+    -> Nhiều thẻ block sẽ rớt xuống hàng.
+    

@@ -1,0 +1,36 @@
+1.display: flex| inline-flex;
+    ->
+2.flex-direction: row <ngang> | column <dọc>;
+
+3.flex-wrap: nowrap <mặc định và không xuống dòng>
+             wrap <xuống dòng, xuống dưới>
+             wrap-reverse <xuống dòng, lên trên>
+
+4.flex-basis: <length> set kích thước cho main size 
+
+5.justify-content: flex-start | flex-end | center | space-between | space-around;
+
+6.justify-self: flex-start | flex-end;
+    -> set canh ngang cho từng item.flex-
+
+7.align-items: flex-start | flex-end;
+
+8.aligh-set: flex-start | flex-end;
+    -> set cho từng item;
+
+9.flex-grow: <number>;
+    ->chia kích thước.
+
+10.flex-shrink: <number>;
+    ->
+
+11.order: <number>;
+    -> sắp xếp vị trí xếp
+
+
+    note: @media (min-width: 740px) {
+    độ rộng tối thiểu thì
+}
+
+max-width: 740px;
+    độ rộng tối đa thì

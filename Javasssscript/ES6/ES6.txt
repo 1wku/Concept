@@ -1,0 +1,123 @@
+1. Sử dựng let và const thay cho var.
+    scope của let và count: block-scope.
+2. chế độ strict mode <chế độ nghiệm ngặt>.
+3. Cách viết hàm không tái sử dụng một cách ngắn hơn theo cấu trúc:
+    *hàm chỉ có mục đích trả về giá trị cho biến greeting.
+    const greeting = () => {
+        anything;
+    }
+    *<parameter> Có thể đặt tham số <mặc định> cho số truyền vào bằng cú pháp:
+    const greeting = (a = 10) => {
+        anything;
+    }    
+    *<rest parameter> cú pháp: ...arr gọi là mã hóa để mảng bình thường thành dạng được cách nhau bởi dấu phẩy.
+    Truyền vào một mảng gồm nhiều đối số với cú pháp:
+    const greeting = (...args) => {
+        anything;
+    }
+    *cách viết hàm không tái sử dụng và return ngắn:
+    const greeting = (a,b) => {(a+b)/2};
+
+/<Spread Operator>
+    Với ES5 để tìm giá trị lớn nhất của mảng chúng ta dừng hàm:
+    var arr = [6. 89, 3, 45];
+    var maximus = Math.max.applay(null, arr);
+    Kết quả nhân được là maximus = 89;
+    Với ES6 chúng ta có thể thay thế bằng code ngắn và dễ hiểu hơn:
+    const maximus = Math.max(...arr);
+    Cú pháp ...array sẽ không trả về như bình thường <có vẻ là thành 1 chuỗi và bỏ đi các dấu phẩy và dấu ngoặc>
+
+/<destructuring Asingment> 
+    Là một cú pháp đặc biệt được giới thiệu trong ES6 gán giá trị được lấy trực tiếp từ một đối tượng một cách gọn gàn hơn.
+    *ES5 code: 
+    const user = { 
+        name: 'John Doe',
+        age: 34
+    };
+    const name = user.name;
+    const age = user.age;
+    *ES6 code:
+    //const {name, age} = user;
+    tự tạo một 2 biến tên name, age và lất value từ user.name và user.age.
+
+/<destructuring Asignment to Assign variables from object>
+    //const {name: userName, age: userAge} = user;
+    -> tạo ra 2 biến userName, userAge với giá trị lần lươt là user.name và user.age.
+    -> gán cho một biến bên ngoài được lấy giá trị từ 1 thuộc tính của 1 Object.
+    +> Trường hợp cho code lồng :
+    ví dụ:
+    const user = {
+        johnDoe: {
+            age: 34,
+            email: 'johnDoe@freecodecamp.com'
+        }
+    };
+    -> gán: !<mình cũng lồng theo nó luôn :))>
+        //const { johnDoe: { age: userAge, email: userName}} = user;
+/<destructuring Asingment to Assign Variables from array> gán giá trị cho mảng.
+    có thể gán giá trị mảng bằng cú pháp: 
+    //const[a,b] = [1,2,3,4,5];
+    => a = 1, b = 2;
+
+    //const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+    => a = 1; b = 2; c = 5;
+    
+    //const [,,...arr] = [1, 2, 3, 4, 5];
+    => arr = [3, 4, 5]
+
+/<Use Destructuring assignment to Pass an Object as a Function's Parametaers>
+    Thay vì: 
+    const profileUpdate = (profileData) => {
+        const {name, age, nationality, location} = profileData;
+    }
+    Có thể thay bằng:
+    const profileUpdate = ({name, age, nationality, location}) => {}
+
+/<Tempalte Literals> Một dạng đặt biệt của chuỗi.
+    1.Thay vì sử dụng dấu ' hoặc ", chúng ta sử dụng ` kết hợp ${variables}.
+    *code mẫu: 
+    person = {
+        name: "Zodiac Hasbro",
+        age: 56
+    };
+    const greeting = `Hello, my name is ${person.name}!
+    I am ${person.age} years old.`;
+
+/<Write Concise Object Literal Declaretions Using Object Property ShortHand>
+    viết hàm trả về 1 object.
+    Thay vì viết:
+    const getMousePosition = (x,y) => ({
+        x:x,
+        y:y
+    });
+    Ta viết: 
+    const setMousePosition = (x,y) => ({x,y});
+
+/<Write concise declarative function with ES6> xác đinh giá cho một thuộc tính của đối tượng bằng function.
+    *cú pháp ES5:
+    const person = {
+        name: "Taylor",
+        sayHello: function() {
+            return `Hello! My name is ${this.name}.`;
+        }
+    }
+    *Cú pháp với ES6: 
+    const person = {
+        name: "Taylor",
+        sayHello() {
+            return `Hello! My name is ${this.name}.`;
+        }
+    };
+
+/<Use class syntax to define a constructor function> sử dụng class keyword mới của es6 để tạo một đối tượng.
+    *cú pháp trong ES5:
+    var SpaceShuttle = function(targetPlanet) {
+        this.targerPlanet = targetPlanet;
+    }
+    var zeus = new SpaceShuttle('Jupiter");
+    *class Syntax :
+    class SpaceShuttle {
+        constructor(targetPlanet) {
+            this.targetPlanet = targetPlanet;
+        }
+    }

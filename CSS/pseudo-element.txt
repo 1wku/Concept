@@ -1,0 +1,11 @@
+::before
+::after
+::first-letter
+::first-line
+::selection
+    
+Chú ý: luôn có content trong thẻ giả.
+
+::selection {
+    phần tử được bôi đen;
+}

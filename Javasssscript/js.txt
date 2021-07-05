@@ -1,0 +1,3 @@
+objName.hasOwnProperty(proName)
+ -> kiểm tra xem đối tượng có chưa property đó không. 
+ -> kết quả trả về là <true> hoặc <false>.

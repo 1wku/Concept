@@ -1,0 +1,41 @@
+Nhưng lệnh thông dụng trong git:
+
+1.*git init.
+	*Khởi tạo git ở bên dưới local <sẽ được tọa 1 file /.git bên trong thư mục đang chạy terminal>.
+2.*git status.
+	*Kiểm tra và hiển thị nhưng trạng thái.
+3.*git add và staging.
+	"git add"-> file vào staging area.
+	"git add ." -> add tất cả file.
+//note: bình thường thì cứ làm xong theo tác mình sẽ "git status" để kiểm tra coi có được add chưa.
+4.*git commit.
+	*Cú pháp chuẩn sau khi add: 
+		<git commit -m "commit message">.
+	*Cú pháp để commit tất không cần git add:
+		<git commit -a -m "commit message"> = <git add .> + <git commit -m "commit message". 
+5. git commit -- amend.<chưa hiểu với chưa biết nó để làm gì cho lắm>.
+	<git commit --amend -a>
+	*sau khi sửa xong ta nhấn Esc để lưu và :wq để trở lại cmd
+//KHÚC NÀY LÀ KHÚC MÀ LẤY CÁI LIN TRÊN GITHUB ĐỂ NÓ LINK VỚI NHAU
+6.*git push
+	<git push -u origin master> lần đầu thì mình làm còn lần sau thì <git push> là oke.
+7. git push --force.
+	*ghi đè toàn bộ commit trên github <không thể lấy lại lịch sử được>.
+8. git log.
+	*Show thông tin lịch sử của branch hiện  tại.
+	<ÔNG DEV ỔNG NÓI ỔNG HAY XÀI git log --oneline>
+	-. lấy được commit id có thể search được commit chính xác.
+9.1 git branch
+	*List ra tất cả các nhánh mà project hiện đang có.
+9.2 git branch branchName
+	*Tạo branch mới.	
+	*Đang ở branch nào thì sẽ tạo nhánh từ branch đó.
+9.3 git branch branchName branchStart
+	*Tạo một nhánh mới từ nhánh branchStart.
+10.1 git checkout 
+	*Chuyển qua lại các nhánh: git checkout branchName.
+10.2 git checkout -b branchName
+	*Tạo nhánh mới và đồng thời truy cập vào nhánh.
+11. git merge
+
+	

@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+  font-family: "Krona One", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > div {
+  padding-top: 100px;
+  margin: auto;
+}
+
+.btn {
+  font-family: inherit;
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 12px 48px;
+  min-width: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  &--disabled {
+      opacity: 0.5 !important;
+      cursor: default;
+      &--size {
+        &-s {
+          padding: 6px 40px;
+        }
+        &-l {
+          padding: 20px 53px;
+        }
+      }
+    }
+    &--success {
+      background-color: #71be34;
+    }
+    &--warn {
+      background-color: #ffb702;
+    }
+    
+    &--danger {
+      background-color: #ff623d;
+    }
+}
+
+
+.btn + .btn {
+  margin-left: 16px;
+}
+
+
+
+/*# sourceMappingURL=main.scss.map */
