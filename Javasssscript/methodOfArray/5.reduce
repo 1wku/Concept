@@ -1,0 +1,72 @@
+Cú pháp:
+    const arr = [1, 2, 3, 4, 5, 6];
+
+    const sum = arr.reduce((tatol, value) => total + value, 0);
+    console.log(sum); //output: 21
+
+Chức năng:Có thể nói đây là method đại ca. Vì sao tôi lại nói như vậy?
+Tôi đoán có nhiều developer javascript chỉ áp dụng reduce này trong việc tính tổng của array mà quên mất rằng Reduce() có thể giúp cho chúng ta nhiều hơn thế nữa như:
++ Đếm các instances của các giá trị trong một đối tượng
++ Làm phẳng mảng
++ Nhóm đối tượng theo thuộc tính
++ Các mảng liên kết chứa trong một mảng các đối tượng sử dụng toán tử spread và initialValue
+
+
+let's do it...
+cú pháp:
+    arr.reduce(callback( accumulator, currentValue[, index[, array]] ) {
+    // return result from executing something for accumulator or currentValue
+    }[, initialValue]);
+    *callback là hàm thực thi với từng phần tử của hàm, với 4 tham số là:
+    1.accumulator: biến tích lũy, được trả về sau mỗi lần gọi hàm callback.
+    2.currentValue phần tử của mang đang được sử lý.
+    3.index(không bắt buộc): chỉ số của phần tử trong mảng đang được xử lý.
+    4.array(không bắt buộc): mảng hiện tại gọi hàm reduxe.
+    **initialValue là giá trị cho tham số thứ nhất(accumulator) cuuar hàm callback trong lần gọi hàm đầu tiên. Nếu giá trị này không được cung cấp thì giá trị phần tử đầu tiên của mảng sẽ được sử dụng.
+
+Ứng dụng:
+Ví dụ: 
+    const arr = [1, 2, 3, 4, 5];
+    const sum = arr.reduce((total,val) => total + val, 0);
+    console.log(sum); // output: 20
+
+
+**Chuyển mảng hai chiều thành một chiều:
+    Chúng ta có thể sử dụng hàm reduce() để san bằng các phần tử lồng nhàu thành một mảng một chiều.
+    code:
+    const data = [[1,2,3], [4,5,6], [7,8,9]];
+
+    const flatValue = data.reduce((total, value) => total.concat(value),[]);
+    console.log(flatValue);
+    ouput = [1,2,3,4,5,6,7,8,9]
+**Tìm trung bình:
+    const avg = flatValue.reduce((total, item, index,array) => {
+    total += item;
+    if (index === array.length -1) {
+        return total/ index;
+        } else {
+            return total;
+        }
+    });
+    console.log(avg);.
+    
+
+**Loại bỏ item trùng lập trong mảng
+    code:
+    let data = [1, 2, 3, 1, 4, 3, 3, 5, 5, 5, 8, 9];
+    let arrResult = data.reduce((accu, curr) => {
+        if (accu.indexOf(curr) === -1) {
+            accu.push(curr);
+        }
+        return accu;
+    },[]);
+    console.log(arrResult); 
+
+**Nhóm các đối tượng theo thuộc tính.
+    code
+    let student = [
+        { name: 'Rick', enrollment: 60 },
+        { name: 'Beth', enrollment: 40 },
+        { name: 'Jerry', enrollment: 40 }
+    ];
+    

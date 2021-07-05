@@ -1,0 +1,7 @@
+Cú pháp:
+    cosnt arr = ['nam', 2, 3, 4, 5, 6];
+    arr.includes('name'); // ouput: true;
+    arr.includes(7); // ouput: false.
+
+Chức năng:check sự tồn tại của một item trong một mảng
+Trả về: TRUE or FALSE.

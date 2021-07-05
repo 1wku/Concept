@@ -1,0 +1,6 @@
+Cú pháp:
+    const arr = [1, 2, 3, 4, 5];
+    
+    const filtered = arr.filter(num => num > 2);
+    console.log(filtered); // output: [3, 4, 5, 6].
+Chức năng: tạo ta một mảng mới thõa mãn điều kiện.
