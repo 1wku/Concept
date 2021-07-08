@@ -121,3 +121,5 @@
             this.targetPlanet = targetPlanet;
         }
     }
+/<Use destructuring assignment with the rest parameter to reasign array elements>
+    
