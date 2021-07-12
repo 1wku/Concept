@@ -42,7 +42,7 @@ Ví dụ:
 **Tìm trung bình:
     const avg = flatValue.reduce((total, item, index,array) => {
     total += item;
-    if (index === array.length -1) {
+    if (index === array.length-1) {
         return total/ index;
         } else {
             return total;

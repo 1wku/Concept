@@ -108,7 +108,9 @@
             return `Hello! My name is ${this.name}.`;
         }
     };
-
+//constructor function vaf class.<constructor: khuôn mẫu> 
+    ***Dùng construct function:
+    
 /<Use class syntax to define a constructor function> sử dụng class keyword mới của es6 để tạo một đối tượng.
     *cú pháp trong ES5:
     var SpaceShuttle = function(targetPlanet) {
@@ -121,5 +123,165 @@
             this.targetPlanet = targetPlanet;
         }
     }
-/<Use destructuring assignment with the rest parameter to reasign array elements>
+    const zeus = new SpaceShuttle('Jupiter');
+/<Use getters and setters to Control Access to an Object> 
+    Getters và Setters là các hàm hoặc phương thức dduojc sử dựng để lấy và đặt các giá trị của biến.
+    **với Methods.
+    Vì getters và setters về cơ bản là các hàm tim nạp/ thay đổi giá trị, có nhiều hơn một cách để tạo và sử dụng.
+    /cách 1: 
+    let obj  = {
+        foo:  'this is the value of foo',
+        getFoo: function() {
+            return this.foo;
+        },
+        setFoo: function(val) {
+            this.foo = val;
+        }
+    }
+obj.setFoo('hello something change'); // setter giá chị cho obj.Foo
+console.log(obj.getFoo()); //getter giá trị của obj.Foo.
+    **với Keyword:
+    Một cách chính thức hơn và mạnh mẽ hỡn để tạo ra getters và setters set
+    là bằng cách sử dụng từ khóa set và get. Để tạo một getter, và đặt từ khóa get trước
+    một khai báo hàm sẽ đóng vai trò là phuong thức getter và sử dựng từ khóa set
+    theo cùng một cách để tạo một setter.
+
+    let obj = {
+        fooVal: 'this is the value of foo',
+        get foo() {
+            return this.fooVal;
+        },
+        set foo(val) {
+            this.fooVal = val;
+        }
+    }
+
+    obj.foo = 'lalalalal'; // sử dụng hàm set đêt gán giá trị cho obj.fooVal
+    console.log(obj.foo);
     
+    *** bảo vệ giữ liệu bằng cách sử dụng block scoping:
+    sử dụng tính chất block scope của let và cho đoạn khai báo đối tượng vòa bên trong dấu ngoặc {}.
+    /note: Nên thêm một cmt trước block muốn tạo.
+
+    code:
+    /* BLOCK SCOPE, leave the braces alone!*/
+    {
+        let fooVal = 'this is the value of foo';
+        var obj = {
+            get foo() {
+                return fooval
+            },
+            set foo() {
+                fooVal = val;
+            }
+        }
+    }
+    console.log(obj.foo); // "this is the value of foo"
+    * nếu muốn thay đổi ta sử dụng cú pháp:+
+    obj.foo = 'something';
+    console.log(obj.foo); //ouput: sonething.
+
+    ***bảo vệ dữ liệu bằng function scoping
+        /Là cách phổ biến hơn với phạm vi là bằng cách giữ liệu bên trong một hàm và trả về một 
+        đối tượng với các getters và setters từ hàm đó. 
+
+        code: 
+        function myobj() {
+            let fooVal = 'this is the value of foo';
+            return {
+                get foo() {
+                return fooVal;
+                }, 
+                set foo(val) {
+                fooVal = val;
+                }
+            }
+        }
+
+        let obj = myobj();
+        console.log(obj.foo); //output: this is the value of foo
+        obj.foo = 'something is change';
+        console.log(obj.foo); //output: something is change
+    ***NO scope***
+    Logic: làm thế nào bạn có thể thay đổi được giữ liệu nếu bạn không biết những gì được gọi đến.
+    code: 
+     let obj - {
+         s8182819812398123c: 'this is the value of foo',
+         get foo() {
+             return this.s8182819812398123c;
+         },
+         set foo(val) {
+             this.s8182819812398123c = val;
+         }
+     }
+
+     console.log(obj.foo);
+    
+     //output: "this is the value of foo"
+
+     ***freecodecamp***
+     class book {
+         constructor(author)  {
+             this._author = author;
+         }
+         get writer() {
+             return this._author;
+         }
+         set writer(val) {
+             this._author = val;
+         }
+     }
+
+//Create a Module Script
+    cách thêm một module vào html:
+    tạo thẻ script:
+    <script type="module" src="index.js"></script>
+
+//Use expirt to Share a Code Block.
+    ***Sử dụng từ khóa export:
+    Cách 1: 
+    export const add = (x,y) => {(x + y)}
+    Cách 2: 
+    const add = (x,y) => {
+        return x + y;
+    }
+    export {add}; 
+
+    *** cách import:
+    import {add} from "./fmaksjdfksdf.js";
+
+//Use * to Import Everthing from a File.
+
+    import * as nameObject form "index.js";
+
+    ** ở đây sẻ tạo ra một Object có tên là "nameObject" chưa các thuộc tính là tất cả các export của file nguồn.
+
+//Create an export Fallback with export default.
+    export default:
+    export default function add(x, y) {
+        return x + y;
+    }
+
+    
+    export default add(x, y) {
+        return x + y;
+    }
+
+    **export default mỗi file chỉ được phép có 1.
+
+//Import a default Export.
+import add from "./index.js";
+***khác với import bình thường cần dấu {}, có thể sử dụng bất cứ tên nào cho import từ export default.
+
+//Create a Javascript Promise.
+    const makeServerRequest = new Promise((resolve, reject) => {
+
+    });
+
+    const uPromise = new Promise ((resolve, reject) => {
+        if (condition here) {
+            resolve("promise was fulfilled");
+        } else {
+            reject("Promise was rejected");
+        }
+    });

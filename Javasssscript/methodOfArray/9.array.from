@@ -1,0 +1,9 @@
+Có thể để hỗ trợ cho map() và filter()........
+
+ví dụ:
+    const name = 'javascript';
+    const nameArray = Array.form(name);
+    console.log(nameArray);
+    output = ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+
+Chức năng: tạo mảng từ một kiểu dữ liệu khác.

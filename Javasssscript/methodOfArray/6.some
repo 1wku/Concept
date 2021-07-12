@@ -1,0 +1,11 @@
+cú pháp:
+    const arr = [3, 9, 7, 6];
+
+    const idiot = arr.some(num => num < 5);
+    console.log(idiot); //output: TRUE
+
+Kết quả trả về: 
+    true nếu có it nhất một thành phần thõa mãn điều kiện.
+    false nếu ngược lại.
+
+Chức năng: kiểm tra ít nhất có 1 người thõa mãn điều kiện sẽ trả về true.

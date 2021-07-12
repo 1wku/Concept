@@ -1,0 +1,12 @@
+cú pháp:
+    const arr = [1, 2, 3, 4, 5, 6];
+    
+    const greaterFour = arr.every(num => num > 4);
+    console.log(greaterFour);
+    //output: false.
+
+    const lesserTen = arr.every(num => num < 10);
+    console.log(lesserTen);
+    //output: true.
+
+Chức nắng: Kiểm tra xem tất cả phần tử của mảng có thão mãn điều kiến không.

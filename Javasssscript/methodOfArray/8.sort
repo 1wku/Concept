@@ -1,0 +1,11 @@
+Cú pháp:
+    const arr = [1, 2, 3, 4, 5];
+    const alpha = ['e', 'a', 'c', 'u', 'y'];
+
+    const descOeder = arr.sort((a, b) => a > b ? -1 : 1);
+    console.log(descOeder);
+    //output: trả về mảng đã được sấp xếp giảm dần.
+
+Chức năng:
+    sấp xếp thành phần trong mảng.
+    
